@@ -285,7 +285,7 @@ class ActivitySeeder extends Seeder
         $a = Activity::create([
             'name'          => 'Horseback riding',        
             'is_paid'       => true,
-            'is_free'       => true,
+            'is_free'       => false,
             'is_indoor'     => false,
             'is_outdoor'    => true,
             'training'      => true,

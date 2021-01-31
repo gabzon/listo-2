@@ -93,6 +93,7 @@
                                 <option value="partner">Partner</option>
                                 <option value="family">Family (Children)</option>
                                 <option value="friends">Friends</option>
+                                <option value="pet">Pets</option>
                             </select>
                         </div>
                     </fieldset>
