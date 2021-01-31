@@ -9,8 +9,7 @@ use Livewire\WithPagination;
 class RandomActivity extends Component
 {
     use WithPagination;
-
-    public bool $display = true;
+    
     public $activity;
     public $free;
     public $location;
