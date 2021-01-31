@@ -1,0 +1,120 @@
+.lw-form-label {
+    @apply block;
+    @apply text-sm;
+    @apply font-medium;
+    @apply leading-5;
+    @apply text-gray-700;
+}
+
+.lw-form-radio {    
+    @apply h-4;
+    @apply w-4;
+    @apply text-indigo-600;
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+}
+
+.lw-form-checkbox {    
+    @apply h-4;
+    @apply w-4;
+    @apply text-indigo-600;
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+}
+
+
+.lw-form-input {
+    @apply mt-1;    
+    @apply block;
+    @apply w-full;
+    @apply py-2;
+    @apply px-3;
+    @apply border;
+    @apply border-gray-300;
+    @apply rounded-md;
+    @apply shadow-sm;
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;    
+}
+
+
+.lw-form-input:focus {
+    @apply outline-none;
+    @apply ring-black;
+    @apply border-blue-300;
+}
+
+
+.lw-form-btn-save {
+    @apply inline-flex;
+    @apply items-center;
+    @apply px-4;
+    @apply py-2;
+    @apply border;
+    @apply border-transparent;
+    @apply text-xs;
+    @apply leading-5;
+    @apply font-semibold;
+    @apply rounded-md;
+    @apply text-white;
+    @apply bg-gray-800;
+    @apply shadow-sm;
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+    @apply uppercase;
+    @apply tracking-widest;
+}
+
+.lw-form-btn-save:hover {
+    @apply bg-gray-700;
+}
+
+.lw-form-btn-save:active {
+    @apply bg-gray-900;
+}
+
+.lw-form-btn-save:disabled {
+    @apply opacity-25;
+}
+
+.lw-form-btn-save:focus {
+    @apply outline-none;
+    @apply ring-black;
+    @apply border-gray-900;
+}
+
+.lw-form-textarea {    
+    @apply mt-1;
+    @apply block;
+    @apply w-full;
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+}
+
+
+.lw-form-select {
+    @apply mt-1;
+    @apply block;
+    @apply w-full;
+    @apply py-2;
+    @apply px-3;
+    @apply border;
+    @apply border-gray-300;
+    @apply bg-white;
+    @apply rounded-md;
+    @apply shadow-sm;
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+}
+
+.lw-form-select:focus {
+    @apply outline-none;
+    @apply ring-black;
+    @apply border-blue-300;
+}

@@ -1,0 +1,192 @@
+models:
+  Activity:
+    name: string
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+
+  Category:
+    name: string unique
+    description: text nullable
+    icon: string nullable
+    image: string nullable
+
+  Country:
+    name: string unique
+    shortname: string unique
+    slug: string unique
+    domain: string nullable
+    alpha_2_Code: string nullable
+    alpha_3_Code: string nullable
+    phone_code: string nullable
+    capital: string nullable
+    region: string nullable
+    subregion: string nullable
+    currency_code: string nullable
+    currency_name: string nullable
+    currency_symbol: string nullable
+    flag: string nullable
+
+  Company:
+    name: string
+    description: text nullable
+    email: string nullable
+    phone: string nullable
+    website: string nullable
+    logo: string nullable
+    employees: integer nullable
+    has_branches: boolean nullable
+    has_insurance: boolean nullable
+    has_newsletter: boolean nullable
+    is_active: boolean nullable
+    founded: date nullable
+    defunct: date nullable              
+    street: string nullable
+    street_number: string nullable
+    address_info: string nullable
+    postal_code: string nullable
+    location: string nullable
+    state: string nullable
+    country: string nullable
+    lat: decimal:10,8 nullable
+    lng: decimal:11,8 nullable         
+    facebook: string nullable
+    twitter: string nullable
+    instagram: string nullable
+    linkedin: string nullable
+    snapchat: string nullable
+    blog: string nullable
+    skype: string nullable
+    pinterest: string nullable
+    youtube: string nullable                    
+    status: string nullable         
+    type: string nullable        
+    softDeletes
+
+  Role:
+    name: string
+    slug: string nullable
+    label: string nullable
+
+  Permission:  
+    name: string
+    slug: string nullable
+    label: string nullable
+
+  Enquiry:                
+    from_1:  string
+    from_country_1:  string nullable
+    from_country_code_1:  string nullable
+    from_lat_1: decimal:10,8 nullable 
+    from_lng_1: decimal:11,8 nullable
+    to_1:  string
+    to_country_1:  string nullable
+    to_country_code_1:  string nullable
+    to_lat_1: decimal:10,8 nullable
+    to_lng_1: decimal:11,8 nullable              
+    departure_date_1: date
+    return_date_1: date nullable
+    from_2: string nullable
+    from_country_2: string nullable
+    from_country_code_2: string nullable
+    from_lat_2: decimal:10,8 nullable
+    from_lng_2: decimal:11,8 nullable
+    to_2: string nullable
+    to_country_2: string nullable
+    to_country_code_2: string nullable
+    to_lat_2: decimal:10,8 nullable
+    to_lng_2: decimal:11,8 nullable
+    departure_date_2: date nullable
+    from_3: string nullable
+    from_country_3: string nullable
+    from_country_code_3: string nullable
+    to_3: string nullable
+    to_country_3: string nullable
+    to_country_code_3: string nullable
+    from_lat_3: decimal:10,8 nullable
+    from_lng_3: decimal:11,8 nullable               
+    to_lat_3: decimal:10,8 nullable
+    to_lng_3: decimal:11,8 nullable
+    departure_date_3: date nullable
+    from_4: string nullable
+    from_country_4: string nullable
+    from_country_code_4: string nullable  
+    to_4: string nullable
+    to_country_4: string nullable
+    to_country_code_4: string nullable
+    from_lat_4: decimal:10,8 nullable
+    from_lng_4: decimal:11,8 nullable  
+    to_lat_4: decimal:10,8 nullable
+    to_lng_4: decimal:11,8 nullable
+    departure_date_4: date nullable
+    flexibility: enum:"Exact dates","+/- 3 days","+/- 1 week","+/- 2 weeks","+/- 1 month","Weekend","Long weekend","Best period"
+    travel_type: enum:round-trip,one-way,multi-cities
+    companions: none,partner,family,colleagues,friends,group
+    nb_adults: integer nullable          
+    nb_kids: integer nullable
+    nb_babies: integer nullable
+    options: set:flights,accommodation,transportation,activities nullable default:"flights"            
+    budget_min: decimal nullable
+    budget_max: decimal nullable
+    comments: text nullable                    
+    flight_class: enum:economy,premium economy,business-class,first-class,private-jet nullable
+    meal_type: string nullable
+    seat_type: string nullable
+    flight_comments: text nullable            
+    accommodation_type: string nullable
+    accommodation_rating: set:1,2,3,4,5 nullable
+    acommodation_comments: text nullable            
+    transportation_type: string nullable
+    car_type: string nullable
+    transportation_comments: text nullable
+    contact_mode: string nullable                                
+    status: enum:pending,open,canceled,completed,draft,expired
+    softDeletes
+    relationships:
+      belongsTo: User
+            
+  Challenge:
+    name: string
+    done: boolean default:false
+
+  Todo:
+    name: string
+    label: string nullable 
+    done: boolean default:false
+
+  Order:
+    subtotal: decimal nullable
+    total_amount: decimal nullable
+    vat: decimal nullable
+    discount_code: decimal nullable
+    discount: decimal nullable
+    method: string nullable
+    comments: text nullable
+    status: enum:open,canceled,paid,expired nullable
+    user_id: foreignID constrained
+    relationships:
+      belongsTo: User
+
+seeders: Activity, Category, Challenge, Company, Country, Enquiry, Order, Permission, Role, Todo 
+
+controllers:
+  Activity:
+    resource: all  
+  Category:
+    resource: all
+  Challenge:
+    resource: all
+  Company:
+    resource: all
+  Country:
+    resource: all
+  Enquiry:
+    resource: all
+  Order:
+    resource: all 
+  Permission:
+    resource: all
+  Role:
+    resource: all 
+  Todo:
+    resource: all

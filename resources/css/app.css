@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@import 'typography.css';
+@import 'buttons.css';
+@import 'navigation.css';
+@import 'form.css';
+
+
+.ap-footer svg{
+    display: inline;
+}
+
+.ap-suggestion-icon svg {
+    @apply inline-block;
+    @apply -mt-3
+}

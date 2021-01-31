@@ -1,0 +1,83 @@
+.lw-btn-default {
+    @apply inline-flex;
+    @apply items-center;
+    @apply px-4;
+    @apply py-2;
+    @apply border;
+    @apply border-transparent;
+    @apply text-xs;
+    @apply leading-5;
+    @apply font-semibold;
+    @apply rounded-md;
+    @apply text-white;
+    @apply bg-gray-800;
+    @apply shadow-sm;    
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+    @apply uppercase;
+    @apply tracking-widest;
+}
+
+.lw-btn-default:hover { @apply bg-gray-700; }
+.lw-btn-default:active { @apply bg-gray-900; }
+.lw-btn-default:disabled { @apply opacity-25; }
+
+.lw-btn-default:focus {
+    @apply outline-none ;
+    @apply ring-gray-50 ;
+    @apply border-gray-900 ;
+}
+
+.lw-btn-danger {
+    @apply inline-flex;
+    @apply items-center;
+    @apply px-4;
+    @apply py-2;
+    @apply border;
+    @apply border-transparent;
+    @apply text-xs;
+    @apply leading-5;
+    @apply font-semibold;
+    @apply rounded-md;
+    @apply text-white;
+    @apply bg-red-600;
+    @apply shadow-sm;    
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+    @apply uppercase;
+    @apply tracking-widest;
+}
+
+.lw-btn-danger:hover { @apply bg-red-700; }
+.lw-btn-danger:active { @apply bg-red-800; }
+.lw-btn-danger:disabled { @apply opacity-25; }
+
+.lw-btn-danger:focus {
+    @apply outline-none ;
+    @apply ring-gray-50 ;
+    @apply border-red-800 ;
+}
+
+.lw-btn-secondary {
+    @apply inline-flex;
+    @apply items-center;
+    @apply px-4;
+    @apply py-2;
+    @apply border;
+    @apply border-transparent;
+    @apply text-xs;
+    @apply leading-5;
+    @apply font-semibold;
+    @apply rounded-md;
+    @apply text-black;
+    @apply bg-gray-300;
+    @apply shadow-sm;    
+    @apply transition;
+    @apply duration-150;
+    @apply ease-in-out;
+    @apply uppercase;
+    @apply tracking-widest;
+}
+.lw-btn-secondary:hover { @apply bg-gray-400; }

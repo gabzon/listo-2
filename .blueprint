@@ -1,0 +1,78 @@
+created:
+    - app/Http/Controllers/ActivityController.php
+    - app/Http/Controllers/CategoryController.php
+    - app/Http/Controllers/ChallengeController.php
+    - app/Http/Controllers/CompanyController.php
+    - app/Http/Controllers/CountryController.php
+    - app/Http/Controllers/EnquiryController.php
+    - app/Http/Controllers/OrderController.php
+    - app/Http/Controllers/PermissionController.php
+    - app/Http/Controllers/RoleController.php
+    - app/Http/Controllers/TodoController.php
+    - database/factories/ActivityFactory.php
+    - database/factories/CategoryFactory.php
+    - database/factories/CountryFactory.php
+    - database/factories/CompanyFactory.php
+    - database/factories/RoleFactory.php
+    - database/factories/PermissionFactory.php
+    - database/factories/EnquiryFactory.php
+    - database/factories/ChallengeFactory.php
+    - database/factories/TodoFactory.php
+    - database/factories/OrderFactory.php
+    - database/migrations/2020_10_09_202801_create_activities_table.php
+    - database/migrations/2020_10_09_202802_create_categories_table.php
+    - database/migrations/2020_10_09_202803_create_countries_table.php
+    - database/migrations/2020_10_09_202804_create_companies_table.php
+    - database/migrations/2020_10_09_202805_create_roles_table.php
+    - database/migrations/2020_10_09_202806_create_permissions_table.php
+    - database/migrations/2020_10_09_202807_create_enquiries_table.php
+    - database/migrations/2020_10_09_202808_create_challenges_table.php
+    - database/migrations/2020_10_09_202809_create_todos_table.php
+    - database/migrations/2020_10_09_202810_create_orders_table.php
+    - app/Activity.php
+    - app/Category.php
+    - app/Country.php
+    - app/Company.php
+    - app/Role.php
+    - app/Permission.php
+    - app/Enquiry.php
+    - app/Challenge.php
+    - app/Todo.php
+    - app/Order.php
+    - database/seeders/ActivitySeeder.php
+    - database/seeders/CategorySeeder.php
+    - database/seeders/ChallengeSeeder.php
+    - database/seeders/CompanySeeder.php
+    - database/seeders/CountrySeeder.php
+    - database/seeders/EnquirySeeder.php
+    - database/seeders/OrderSeeder.php
+    - database/seeders/PermissionSeeder.php
+    - database/seeders/RoleSeeder.php
+    - database/seeders/TodoSeeder.php
+    - tests/Feature/Http/Controllers/ActivityControllerTest.php
+    - tests/Feature/Http/Controllers/CategoryControllerTest.php
+    - tests/Feature/Http/Controllers/ChallengeControllerTest.php
+    - tests/Feature/Http/Controllers/CompanyControllerTest.php
+    - tests/Feature/Http/Controllers/CountryControllerTest.php
+    - tests/Feature/Http/Controllers/EnquiryControllerTest.php
+    - tests/Feature/Http/Controllers/OrderControllerTest.php
+    - tests/Feature/Http/Controllers/PermissionControllerTest.php
+    - tests/Feature/Http/Controllers/RoleControllerTest.php
+    - tests/Feature/Http/Controllers/TodoControllerTest.php
+updated:
+    - routes/web.php
+models:
+    Models\Membership: { team_id: 'biginteger unsigned', user_id: 'biginteger unsigned', role: 'string nullable' }
+    Models\Profile: { user_id: 'biginteger unsigned', username: 'string nullable', profession: 'string nullable', biography: 'text nullable', mobile: 'string nullable', phone: 'string nullable', mobile_verified_at: 'datetime nullable', phone_verified_at: 'datetime nullable', whatsapp: 'boolean default:0', fb_messenger: 'boolean default:0', ig_messages: 'boolean default:0', viber: 'boolean default:0', wechat: 'boolean default:0', telegram: 'boolean default:0', '`call`': 'boolean default:0', sms: 'boolean default:0', street_address: 'string nullable', address_info: 'string nullable', postal_code: 'string nullable', city: 'string nullable', state: 'string nullable', country: 'string nullable', lat: 'decimal:10,8 nullable', lng: 'decimal:11,8 nullable', facebook: 'string nullable', linkedin: 'string nullable', instagram: 'string nullable', youtube: 'string nullable', tiktok: 'string nullable', twitter: 'string nullable', skype: 'string nullable', snapchat: 'string nullable', pinterest: 'string nullable', passport1: 'string nullable', passport2: 'string nullable', passport3: 'string nullable', passport4: 'string nullable', passport1_expiry: 'date nullable', passport2_expiry: 'date nullable', passport3_expiry: 'date nullable', passport4_expiry: 'date nullable' }
+    Models\Team: { user_id: 'biginteger unsigned', name: string, personal_team: boolean }
+    Models\User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, two_factor_secret: 'text nullable', two_factor_recovery_codes: 'text nullable', remember_token: 'string:100 nullable', current_team_id: 'biginteger unsigned nullable', profile_photo_path: 'text nullable', gender: 'enum:male,female nullable', birthday: 'date nullable' }
+    Activity: { name: string, description: 'text nullable', icon: 'string nullable', image: 'string nullable' }
+    Category: { name: 'string unique', description: 'text nullable', icon: 'string nullable', image: 'string nullable' }
+    Country: { name: 'string unique', slug: 'string unique', domain: 'string nullable', alpha_2_Code: 'string nullable', alpha_3_Code: 'string nullable', phone_code: 'string nullable', capital: 'string nullable', region: 'string nullable', subregion: 'string nullable', currency_code: 'string nullable', currency_name: 'string nullable', currency_symbol: 'string nullable', flag: 'string nullable' }
+    Company: { name: string, description: 'text nullable', email: 'string nullable', phone: 'string nullable', website: 'string nullable', logo: 'string nullable', employees: 'integer nullable', has_branches: 'boolean nullable', has_insurance: 'boolean nullable', has_newsletter: 'boolean nullable', is_active: 'boolean nullable', founded: 'date nullable', defunct: 'date nullable', street: 'string nullable', street_number: 'string nullable', address_info: 'string nullable', postal_code: 'string nullable', location: 'string nullable', state: 'string nullable', country: 'string nullable', lat: 'decimal:10,8 nullable', lng: 'decimal:11,8 nullable', facebook: 'string nullable', twitter: 'string nullable', instagram: 'string nullable', linkedin: 'string nullable', snapchat: 'string nullable', blog: 'string nullable', skype: 'string nullable', pinterest: 'string nullable', youtube: 'string nullable', status: 'string nullable', type: 'string nullable', softdeletes: softDeletes }
+    Role: { name: string, slug: 'string nullable', label: 'string nullable' }
+    Permission: { name: string, slug: 'string nullable', label: 'string nullable' }
+    Enquiry: { from_1: string, from_country_1: 'string nullable', from_country_code_1: 'string nullable', from_lat_1: 'decimal:10,8 nullable', from_lng_1: 'decimal:11,8 nullable', to_1: string, to_country_1: 'string nullable', to_country_code_1: 'string nullable', to_lat_1: 'decimal:10,8 nullable', to_lng_1: 'decimal:11,8 nullable', departure_date_1: date, return_date_1: 'date nullable', from_2: 'string nullable', from_country_2: 'string nullable', from_country_code_2: 'string nullable', from_lat_2: 'decimal:10,8 nullable', from_lng_2: 'decimal:11,8 nullable', to_2: 'string nullable', to_country_2: 'string nullable', to_country_code_2: 'string nullable', to_lat_2: 'decimal:10,8 nullable', to_lng_2: 'decimal:11,8 nullable', departure_date_2: 'date nullable', from_3: 'string nullable', from_country_3: 'string nullable', from_country_code_3: 'string nullable', to_3: 'string nullable', to_country_3: 'string nullable', to_country_code_3: 'string nullable', from_lat_3: 'decimal:10,8 nullable', from_lng_3: 'decimal:11,8 nullable', to_lat_3: 'decimal:10,8 nullable', to_lng_3: 'decimal:11,8 nullable', departure_date_3: 'date nullable', from_4: 'string nullable', from_country_4: 'string nullable', from_country_code_4: 'string nullable', to_4: 'string nullable', to_country_4: 'string nullable', to_country_code_4: 'string nullable', from_lat_4: 'decimal:10,8 nullable', from_lng_4: 'decimal:11,8 nullable', to_lat_4: 'decimal:10,8 nullable', to_lng_4: 'decimal:11,8 nullable', departure_date_4: 'date nullable', flexibility: 'enum:"Exact dates","+/- 3 days","+/- 1 week","+/- 2 weeks","+/- 1 month","Weekend","Long weekend","Best period"', travel_type: 'enum:round-trip,one-way,multi-cities', companions: 'none,partner,family,colleagues,friends,group', nb_adults: 'integer nullable', nb_kids: 'integer nullable', nb_babies: 'integer nullable', options: 'set:flights,accommodation,transportation,activities nullable default:"flights"', budget_min: 'decimal nullable', budget_max: 'decimal nullable', comments: 'text nullable', flight_class: 'enum:economy,premium economy,business-class,first-class,private-jet nullable', meal_type: 'string nullable', seat_type: 'string nullable', flight_comments: 'text nullable', accommodation_type: 'string nullable', accommodation_rating: 'set:1,2,3,4,5 nullable', acommodation_comments: 'text nullable', transportation_type: 'string nullable', car_type: 'string nullable', transportation_comments: 'text nullable', contact_mode: 'string nullable', status: 'enum:pending,open,canceled,completed,draft,expired', softdeletes: softDeletes, relationships: { belongsTo: User } }
+    Challenge: { name: string, done: 'boolean default:false' }
+    Todo: { name: string, label: 'string nullable', done: 'boolean default:false' }
+    Order: { subtotal: 'decimal nullable', total_amount: 'decimal nullable', vat: 'decimal nullable', discount_code: 'decimal nullable', discount: 'decimal nullable', method: 'string nullable', comments: 'text nullable', status: 'enum:open,canceled,paid,expired nullable', user_id: 'foreignID constrained', relationships: { belongsTo: User } }
