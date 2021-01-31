@@ -7,8 +7,8 @@ use Livewire\Component;
 
 class UserInfo extends Component
 {
-    public User $user;
-    public Profile $profile;
+    public $user;
+    public $profile;
     public $username;
     public $birthday;
     public $gender;
@@ -23,7 +23,7 @@ class UserInfo extends Component
     public $passport3_expiry;
     public $passport4_expiry;
 
-    public function mount(User $user)
+    public function mount($user)
     {
         $this->user = $user;
         
