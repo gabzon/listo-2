@@ -7,7 +7,7 @@ use Livewire\Component;
 class UserAddressInfo extends Component
 {
     public $uid;
-    public Profile $profile;
+    public $profile;
     public $country;
     public $street_address;
     public $address_info;
