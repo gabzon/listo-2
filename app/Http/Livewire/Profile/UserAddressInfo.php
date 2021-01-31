@@ -34,7 +34,7 @@ class UserAddressInfo extends Component
         session()->flash('success', 'Address successfully updated.');
     }
 
-    public function mount(int $uid)
+    public function mount($uid)
     {
         $this->uid = $uid;
         

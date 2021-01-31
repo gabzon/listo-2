@@ -8,8 +8,8 @@ use Livewire\Component;
 
 class UserContactInfo extends Component
 {
-    public User $user;
-    public Profile $profile;
+    public $user;
+    public $profile;
     public $mobile;
     public $phone;
     public $whatsapp;
@@ -30,7 +30,7 @@ class UserContactInfo extends Component
     public $pinterest;
 
 
-    public function mount(User $user)
+    public function mount($user)
     {
         $this->user =  $user;
         $this->profile = Profile::firstOrCreate([
